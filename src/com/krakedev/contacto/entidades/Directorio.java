@@ -37,11 +37,22 @@ public class Directorio {
 
 	}
 
-	// Metodo para devolver un  (contacto)
+	// Metodo para devolver un (contacto)
 
 	public Contacto obtenerContacto(int posicion) {
 		return contactos.get(posicion);
 
+	}
+
+	// Metodo que recorra todo el arreglo y pueda acceder a cualquier atributo
+
+	public void imprimirContactos() {
+
+		for (int i = 0; i < contactos.size(); i++) {
+			Contacto contacto = contactos.get(i);
+
+			System.out.println("Nombre: " + contacto.getNombre());
+		}
 	}
 
 }

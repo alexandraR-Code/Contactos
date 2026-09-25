@@ -19,7 +19,7 @@ public class TestReferenciayErrores {
 		//Contacto vacio 
 		dir.agregarContacto(new Contacto());
 		
-		Contacto c = dir.obtenerContacto(6);
+		Contacto c = dir.obtenerContacto(1);
 		
 		System.out.println("Nombre: " + c.getNombre());
 		
