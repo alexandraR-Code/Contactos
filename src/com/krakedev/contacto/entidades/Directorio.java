@@ -37,4 +37,11 @@ public class Directorio {
 
 	}
 
+	// Metodo para devolver un  (contacto)
+
+	public Contacto obtenerContacto(int posicion) {
+		return contactos.get(posicion);
+
+	}
+
 }
