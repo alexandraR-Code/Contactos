@@ -25,8 +25,17 @@ public class Directorio {
 
 	// Metodo para agregar contactos
 
-	public void agregarContacto(Contacto contacto) {
-		contactos.add(contacto);
+	public boolean agregarContacto(Contacto contacto) {
+		Contacto existente = buscarContacto(contacto.getCelular());
+		if (existente == null) {
+			contactos.add(contacto);
+
+			return true;
+
+		} else {
+			return false;
+		}
+
 	}
 
 	// Metodo para cantidadd de contato
