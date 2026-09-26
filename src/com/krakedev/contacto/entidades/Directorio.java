@@ -87,4 +87,17 @@ public class Directorio {
 		return null;
 	}
 
+	// Metodo eliminar contacto
+	public boolean eliminarContacto(String numero) {
+		Contacto encontrado = buscarContacto(numero);
+
+		if (encontrado == null) {
+			return false;
+		} else {
+			contactos.remove(encontrado);
+			return true;
+		}
+
+	}
+
 }

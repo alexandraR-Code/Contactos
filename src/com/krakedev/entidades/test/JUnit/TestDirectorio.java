@@ -20,8 +20,8 @@ import com.krakedev.contacto.entidades.Contacto;
 import com.krakedev.contacto.entidades.Directorio;
 
 /**
- * Pruebas unitarias de la clase Directorio.
- * Cada prueba revisa un solo comportamiento y no usa parámetros.
+ * Pruebas unitarias de la clase Directorio. Cada prueba revisa un solo
+ * comportamiento y no usa parámetros.
  */
 public class TestDirectorio {
 
@@ -34,9 +34,8 @@ public class TestDirectorio {
 	private Contacto contacto3;
 
 	/**
-	 * Se ejecuta antes de cada prueba.
-	 * Crea un directorio vacío y tres contactos con celulares distintos,
-	 * para que ninguna prueba dependa de otra.
+	 * Se ejecuta antes de cada prueba. Crea un directorio vacío y tres contactos
+	 * con celulares distintos, para que ninguna prueba dependa de otra.
 	 */
 	@BeforeEach
 	public void inicializar() {
@@ -102,8 +101,8 @@ public class TestDirectorio {
 	}
 
 	/**
-	 * Revisa que no se agregue un contacto cuyo celular ya existe.
-	 * El método debe devolver false y la cantidad no debe cambiar.
+	 * Revisa que no se agregue un contacto cuyo celular ya existe. El método debe
+	 * devolver false y la cantidad no debe cambiar.
 	 */
 	@Test
 	@DisplayName("No se agrega un contacto con celular repetido")
@@ -148,8 +147,8 @@ public class TestDirectorio {
 	// ------------------------------------------------------------
 
 	/**
-	 * Revisa que la cantidad solo cuente los contactos que sí se agregaron
-	 * y no los rechazados por estar duplicados.
+	 * Revisa que la cantidad solo cuente los contactos que sí se agregaron y no los
+	 * rechazados por estar duplicados.
 	 */
 	@Test
 	@DisplayName("La cantidad no cuenta los contactos rechazados")
@@ -166,8 +165,8 @@ public class TestDirectorio {
 	// ------------------------------------------------------------
 
 	/**
-	 * Revisa que obtenerContacto devuelva el mismo objeto que se agregó
-	 * en esa posición, respetando el orden de inserción.
+	 * Revisa que obtenerContacto devuelva el mismo objeto que se agregó en esa
+	 * posición, respetando el orden de inserción.
 	 */
 	@Test
 	@DisplayName("Obtener un contacto por posición")
@@ -207,8 +206,8 @@ public class TestDirectorio {
 	// ------------------------------------------------------------
 
 	/**
-	 * Revisa que recuperarNumero devuelva el celular del contacto
-	 * que está en la posición indicada.
+	 * Revisa que recuperarNumero devuelva el celular del contacto que está en la
+	 * posición indicada.
 	 */
 	@Test
 	@DisplayName("Recuperar el número de celular por posición")
@@ -274,15 +273,15 @@ public class TestDirectorio {
 	}
 
 	/**
-	 * Revisa que la búsqueda compare el número exacto:
-	 * un número parecido o con espacios no debe coincidir.
+	 * Revisa que la búsqueda compare el número exacto: un número parecido o con
+	 * espacios no debe coincidir.
 	 */
 	@Test
 	@DisplayName("La búsqueda exige el número exacto")
 	public void testBuscarContactoNumeroExacto() {
 		directorio.agregarContacto(contacto1);
 
-		assertNull(directorio.buscarContacto("099111111"));    // le falta un dígito
+		assertNull(directorio.buscarContacto("099111111")); // le falta un dígito
 		assertNull(directorio.buscarContacto(" 0991111111 ")); // tiene espacios
 	}
 
@@ -291,8 +290,8 @@ public class TestDirectorio {
 	// ------------------------------------------------------------
 
 	/**
-	 * Revisa que setContactos reemplace la lista interna
-	 * y que los demás métodos trabajen con la lista nueva.
+	 * Revisa que setContactos reemplace la lista interna y que los demás métodos
+	 * trabajen con la lista nueva.
 	 */
 	@Test
 	@DisplayName("setContactos reemplaza la lista interna")
@@ -313,8 +312,8 @@ public class TestDirectorio {
 	// ------------------------------------------------------------
 
 	/**
-	 * Revisa que imprimirContactos muestre el nombre de cada contacto.
-	 * Durante la prueba, la salida de consola se guarda en memoria para poder revisarla.
+	 * Revisa que imprimirContactos muestre el nombre de cada contacto. Durante la
+	 * prueba, la salida de consola se guarda en memoria para poder revisarla.
 	 */
 	@Test
 	@DisplayName("imprimirContactos muestra los nombres en consola")
