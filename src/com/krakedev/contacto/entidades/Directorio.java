@@ -55,4 +55,14 @@ public class Directorio {
 		}
 	}
 
+	// Metodo para recuperra un numero telefonico
+	public String recuperarNumero(int posicion) {
+
+		Contacto c = contactos.get(posicion);
+
+		String numero = c.getCelular();
+		return numero;
+
+	}
+
 }
