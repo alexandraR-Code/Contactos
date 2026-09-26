@@ -100,4 +100,17 @@ public class Directorio {
 
 	}
 
+	// Metodo para buscar por nombre para reetornar una lista de coincidencias
+	public ArrayList<Contacto> buscarContactosCoincidencias(String subcadena) {
+		ArrayList<Contacto> encontrado = new ArrayList<Contacto>();
+
+		for (int i = 0; i < contactos.size(); i++) {
+			Contacto c = contactos.get(i);
+			if (c.getNombre().startsWith(subcadena)) {
+				encontrado.add(c);
+			}
+		}
+		return encontrado;
+	}
+
 }
