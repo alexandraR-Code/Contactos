@@ -76,15 +76,19 @@ public class Directorio {
 
 	// Metodo buscar contacto
 	public Contacto buscarContacto(String numero) {
+		Contacto encontrado = null;
 		for (int i = 0; i < contactos.size(); i++) {
+			System.out.println("----------Nueva busqueda -----------");
+			System.out.println("Posicion: " + i);
 			Contacto c = contactos.get(i);
 
 			if (c.getCelular().equals(numero)) {
-				return c;
+				encontrado = c;
+				break;
 			}
 
 		}
-		return null;
+		return encontrado;
 	}
 
 	// Metodo eliminar contacto
